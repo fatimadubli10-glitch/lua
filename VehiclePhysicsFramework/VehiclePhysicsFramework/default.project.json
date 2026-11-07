@@ -1,0 +1,23 @@
+{
+  "name": "VehiclePhysicsFramework",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/ReplicatedStorage/Shared"
+      }
+    },
+    "ServerScriptService": {
+      "VehicleServer": {
+        "$path": "src/ServerScriptService/VehicleServer"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "VehicleClient": {
+          "$path": "src/StarterPlayer/StarterPlayerScripts/VehicleClient"
+        }
+      }
+    }
+  }
+}

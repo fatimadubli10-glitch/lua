@@ -1,0 +1,16 @@
+local MathUtility = require(game.ReplicatedStorage.Shared.MathUtility)
+
+return function()
+    assert(MathUtility.Clamp(2, 0, 1) == 1)
+    assert(MathUtility.Clamp(-1, 0, 1) == 0)
+    assert(MathUtility.SafeDivide(10, 0, 4) == 4)
+    assert(MathUtility.SafeDivide(10, 2) == 5)
+    assert(MathUtility.Deadzone(0.02, 0.05) == 0)
+    assert(math.abs(MathUtility.Deadzone(0.5, 0.1) - (0.5 - 0.1) / 0.9) < 1e-6)
+    assert(MathUtility.IsFinite(1))
+    assert(not MathUtility.IsFinite(math.huge))
+    assert(MathUtility.IsFiniteVector(Vector3.new(1, 2, 3)))
+    assert(not MathUtility.IsFiniteVector(Vector3.new(0 / 0, 0, 0)))
+    assert(MathUtility.Average({2, 4, 6}) == 4)
+    assert(MathUtility.Average({}) == 0)
+end
